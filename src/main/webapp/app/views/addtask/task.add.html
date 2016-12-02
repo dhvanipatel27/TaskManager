@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+</head>
+
+<body>
+    <div class="row page-header">
+        <div class="col-md-offset-2 col-md-2">
+            {{title}}
+           
+        </div>
+    </div>
+    <form>
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.priority">Priority</label>
+            </div>
+            <div class=" col-md-6">
+                <select ng-model="task.priority" class="form-control">
+                    <option value="">Select Priority</option>
+                <option ng-repeat="opt in selectOptions.priority" value="{{opt}}">{{opt}}</option>        
+            </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.type">Type</label>
+            </div>
+            <div class=" col-md-6">
+                <select ng-model="task.type" class="form-control">
+                    <option value="">Select Type</option>
+                <option ng-repeat="opt in selectOptions.type" value="{{opt}}">{{opt}}</option>        
+            </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.processing_by">Processing By</label>
+            </div>
+            <div class=" col-md-6">
+                <select ng-model="task.processing_by" class="form-control">
+                    <option value="">Select Processor</option>
+                <option ng-repeat="opt in selectOptions.processing_by" value="{{opt}}">{{opt}}</option>        
+            </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.employee_name">Employee Name</label>
+            </div>
+            <div class=" col-md-6">
+                <select ng-model="task.employee_name" class="form-control">
+                    <option value="">Select Employee Name</option>
+                <option ng-repeat="opt in selectOptions.employee_name" value="{{opt}}">{{opt}}</option>        
+            </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.task_subject">Task Subject</label>
+            </div>
+            <div class="col-md-6">
+                <select ng-model="task.task_subject" class="form-control">
+                    <option value="">Select Task Subject</option>
+                <option ng-repeat="opt in selectOptions.task_subject" value="{{opt}}">{{opt}}</option>        
+            </select>
+
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.requested_by">Requested By</label>
+            </div>
+            <div class=" col-md-6">
+                <select ng-model="task.requested_by" class="form-control">
+                    <option value="">Select Requester </option>
+                <option ng-repeat="opt in selectOptions.requested_by" value="{{opt}}">{{opt}}</option>        
+            </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.task_owner">Task Owner</label>
+            </div>
+            <div class=" col-md-6">
+                <select ng-model="task.task_owner" class="form-control">
+                    <option value="">Select Task Owner</option>
+                <option ng-model="task.task_owner" ng-repeat="opt in selectOptions.task_owner" value="{{opt}}">{{opt}}</option>        
+            </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.request_receive_date">Request Receive Date</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="date" class="form-control" ng-model="task.requested_recieved_date">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.internal_due_date">Internal Due Date</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="date" class="form-control" ng-model="task.internal_due_date">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.uscis_due_date">USCIS Due Date</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="date" class="form-control" ng-model="task.uscis_due_date">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.uscis_delivery_date">USCIS Delivery Date</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="date" class="form-control" ng-model="task.uscis_delivery_date">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.uscis_decision_date">USCIS Decision Date</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="date" class="form-control" ng-model="task.uscis_decision_date">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.status">Status</label>
+            </div>
+            <div class=" col-md-6">
+                <select ng-model="task.status" class="form-control">
+                    <option value="">Select Status</option>
+                <option ng-repeat="opt in selectOptions.status" value="{{opt}}">{{opt}}</option>        
+            </select>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.project_name">Project</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="text" class="form-control" ng-model="task.project_name" placeholder=" Enter Project">
+
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.pending_documents">Pending Documents</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="text" class="form-control" ng-model="task.pending_documents" placeholder="Type Documents">
+
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <label for="task.comments">Comments</label>
+            </div>
+            <div class=" col-md-6">
+                <input type="text" ng-model="task.comment_detail" class="form-control" placeholder="Type Comments">
+            </div>
+        </div>
+
+
+        <div class="row form-group">
+            <div class="col-md-offset-4 col-md-3">
+
+
+                <button type="submit" class="btn btn-default btn-primary" ng-click="saveTask();">Save Task</button>
+
+
+            </div>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

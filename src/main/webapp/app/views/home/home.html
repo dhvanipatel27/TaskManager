@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+<h3>{{title}}</h3>
+    <div class="task_table">
+
+        <table class="table table-sm table-hover">
+            <thead>
+                <tr>
+                    <th>Priority</th>
+                    <th>Type</th>
+                    <th>Employee Name</th>
+                    <th>Task Subject</th>
+                    <th>Requested By</th>
+                    <th>Internal Due Date</th>
+                    <th>USCIS Due Date</th>
+                    <th>Status</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                  <tr ng-repeat="task in tasks" ng-click="goTo(task.tId)"> 
+              
+                    <td>{{task.priority}}</td>
+                    <td>{{task.type}}</td>
+                    <td>{{task.employee_name}}</td>
+                    <td>{{task.task_subject}}</td>
+                    <td>{{task.requested_by}}</td>
+                    <td>{{task.internal_due_date}}</td>
+                    <td>{{task.uscis_due_date}}</td>
+                    <td>{{task.status}}</td>
+                    <td>{{task.comment_detail}}</td>
+                     <td><a href="#/edit/{{task.tId}}"><span class="glyphicon glyphicon-pencil grey"></span></a> &nbsp; &nbsp; <a href="#/" ng-click="$event.preventDefault(); deleteTask(task.tId);"><span class="glyphicon glyphicon-trash grey"></span></a></td>
+                  
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+</body>
+
+</html>
