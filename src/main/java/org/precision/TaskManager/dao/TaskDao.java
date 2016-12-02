@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.precision.TaskManager.model.Task;
-
+//DB Connectivity..
 public class TaskDao {
 	
 	public Connection getConnnection() {
